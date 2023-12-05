@@ -9,7 +9,7 @@ const Card = ({ pokemon }) => {
     <div>
       <h3>{pokemon.name}</h3>
       <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-      {/* Agrega más detalles según sea necesario */}
+      
     </div>
   );
 };

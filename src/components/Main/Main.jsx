@@ -7,7 +7,8 @@ const Main = () => {
   const [searchText, setSearchText] = useState("");
   const [pokemonList, setPokemonList] = useState([]);
 
-  const handleSearch = async () => {
+  const handleSearch = async (e) => {
+    e.preventDefault()
     try {
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${searchText.toLowerCase()}`);
       const data = response.data;

@@ -6,14 +6,15 @@ const Search = ({ searchText, setSearchText, onSearch }) => {
   };
 
   return (
-    <div>
+    <form onSubmit={onSearch}>
       <input
         type="text"
         value={searchText}
         onChange={handleInputChange}
       />
-      <button onClick={onSearch}>Buscar</button>
-    </div>
+      <button type="submit" >Buscar</button>
+    </form>
+
   );
 };
 
