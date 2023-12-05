@@ -7,11 +7,11 @@ const Main = () => {
   const [searchText, setSearchText] = useState("");
   const [pokemonList, setPokemonList] = useState([]);
 
-  const handleSearch = async (e) => {
-    e.preventDefault()
-
+  const handleSearch = async () => {
+  
     const busqueda = (element) => element.name === searchText.toLocaleLowerCase() || element.id == searchText
 
+    if (searchText.trim() == "") return
     if (!pokemonList.some(busqueda)) {
 
       try {
