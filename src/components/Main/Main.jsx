@@ -9,15 +9,20 @@ const Main = () => {
 
   const handleSearch = async (e) => {
     e.preventDefault()
-    try {
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${searchText.toLowerCase()}`);
-      const data = response.data;
 
-      setPokemonList((prevList) => [...prevList, data]);
-    } catch (error) {
-      console.error("Error fetching Pokemon:", error);
+    const busqueda = (element) => element.name === searchText.toLocaleLowerCase() || element.id == searchText
+
+    if (!pokemonList.some(busqueda)) {
+
+      try {
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${searchText.toLowerCase()}`);
+        const data = response.data;
+
+        setPokemonList((prevList) => [...prevList, data]);
+      } catch (error) {
+        console.error("Error fetching Pokemon:", error);
+      }
     }
-
     setSearchText("");
   };
 
