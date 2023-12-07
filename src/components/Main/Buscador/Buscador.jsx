@@ -20,7 +20,7 @@ const Buscador = () => {
 
         setPokemonList((prevList) => [...prevList, data]);
       } catch (error) {
-        console.error("Error fetching Pokemon:", error);
+        alert("pokemon no encontrado")
       }
     }
     setSearchText("");
