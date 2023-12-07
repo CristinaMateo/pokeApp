@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import Search from './Search'
-import ListaPokemon from "./ListaPokemon";
+import Search from './Search';
+import HomeList from "../Home/HomeList";
 
 const Buscador = () => {
   const [searchText, setSearchText] = useState("");
@@ -29,7 +29,7 @@ const Buscador = () => {
   return (
     <main>
       <Search searchText={searchText} setSearchText={setSearchText} onSearch={handleSearch} />
-      <ListaPokemon pokemonList={pokemonList} />
+      <HomeList allPokemon={pokemonList} />
     </main>
   );
 };
