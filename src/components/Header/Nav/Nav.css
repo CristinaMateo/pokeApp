@@ -4,6 +4,7 @@
     width:100vw;
     list-style: none;
     padding: 10px;
+    margin: auto;
 }
 
 li>a{
