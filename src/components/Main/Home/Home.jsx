@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import HomeList from './HomeList';
-import inicio from '../../../assets/inicio.png'
+
 
 const Home = () => {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -35,8 +35,12 @@ const Home = () => {
 
   return (
     <>
-      <img src={inicio} alt="imagen de inicio" />
-      <HomeList allPokemon={allPokemon} />
+      <section id="home">
+        
+        <article className="pokemon-container">
+          <HomeList allPokemon={allPokemon} />
+        </article>
+      </section>
     </>
   );
 };

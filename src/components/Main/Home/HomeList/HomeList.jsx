@@ -3,7 +3,7 @@ import HomeCard from "./HomeCard";
 
 const HomeList = ({ allPokemon }) => {
   return (
-    <div>
+    <div className="homeList">
       {allPokemon.map((pokemon, index) => (
         <HomeCard key={index} pokemon={pokemon} />
       ))}
