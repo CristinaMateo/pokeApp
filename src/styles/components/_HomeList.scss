@@ -1,3 +1,6 @@
 .homeList{
-    flex: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }

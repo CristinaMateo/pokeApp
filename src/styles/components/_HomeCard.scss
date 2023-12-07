@@ -1,14 +1,12 @@
 @import '../utils/variables.scss';
 
 .card{
-    background-color: whitesmoke;
-    width: 23%;
-    margin: 0.5em auto;
-    display:grid;
-    justify-content: center;
-    box-shadow: #573102 5px 6px 20px 0px;
-    border-radius: 0.5em;
-    cursor: pointer;
+  background-color: whitesmoke;
+  margin: 0.5em;
+  justify-content: center;
+  box-shadow: #573102 5px 6px 20px 0px;
+  border-radius: 0.5em;
+  cursor: pointer;
   }
 
   .pokeImg{

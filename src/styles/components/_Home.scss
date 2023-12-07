@@ -1,13 +1,11 @@
 @import '../utils/variables.scss';
-@import '../utils/mixins.scss';
 
-#home{
-    @include standard-component;
-    display: flex;
-    flex-direction: column;
+
+#home {
+    width: 100%;
+    margin: 0 auto;
 }
 
-#inicio{
+#inicio {
     width: 30%;
 }
-
