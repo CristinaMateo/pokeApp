@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import HomeCard from "./HomeCard";
 
 const HomeList = ({ allPokemon }) => {
@@ -6,7 +7,7 @@ const HomeList = ({ allPokemon }) => {
     <div className="homeList">
       {allPokemon == undefined? <p>No hay pokemon</p> :
       allPokemon.map((pokemon, index) => (
-        <HomeCard key={index} pokemon={pokemon} />
+        <Link className="toDetails" to={`/pokemon/${pokemon.name}`}><HomeCard key={index} pokemon={pokemon} /></Link>
       ))
       
       }

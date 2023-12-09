@@ -1,15 +1,55 @@
 @import '../utils/variables.scss';
 
-.card{
-  background-color: whitesmoke;
+.card {
   margin: 0.5em;
   justify-content: center;
   box-shadow: #573102 5px 6px 20px 0px;
   border-radius: 0.5em;
   cursor: pointer;
-  }
+  color: black;
+  background:rgba(248, 245, 241, 0.562);
+  position: relative;
+  border-radius: 10px;
+}
 
-  .pokeImg{
-    width: 50%;
-    margin: auto;
-  }
+.card:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity:0.3;
+  background: url('/src/assets/fondo.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+
+.pokeImg {
+  width: 50%;
+  margin: auto;
+z-index: 2;
+position: relative;
+}
+
+.pokeId {
+  text-align: right;
+  padding: 10px;
+  z-index: 2;
+  position: relative;
+}
+
+.pokeType {
+  padding: 10px;
+  z-index: 2;
+  position: relative;
+}
+h3{
+  z-index: 2;
+  position: relative;
+}
