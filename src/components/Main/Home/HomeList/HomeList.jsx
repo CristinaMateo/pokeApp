@@ -7,7 +7,7 @@ const HomeList = ({ allPokemon }) => {
     <div className="homeList">
       {allPokemon == undefined? <p>No hay pokemon</p> :
       allPokemon.map((pokemon, index) => (
-        <Link className="toDetails" to={`/pokemon/${pokemon.name}`}><HomeCard key={index} pokemon={pokemon} /></Link>
+        <Link className="toDetails" to={`/pokemon/${pokemon.id}`}><HomeCard key={index} pokemon={pokemon} /></Link>
       ))
       
       }
