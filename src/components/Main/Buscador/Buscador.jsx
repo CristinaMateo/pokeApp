@@ -29,7 +29,7 @@ const Buscador = () => {
   return (
     <main>
       <Search searchText={searchText} setSearchText={setSearchText} onSearch={handleSearch} />
-      <HomeList allPokemon={pokemonList} />
+      <HomeList pokeList={pokemonList} />
     </main>
   );
 };

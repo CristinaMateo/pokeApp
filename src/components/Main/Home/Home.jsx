@@ -38,7 +38,7 @@ const Home = () => {
       <section id="home">
         
         <article className="pokemon-container">
-          <HomeList allPokemon={allPokemon} />
+          <HomeList pokeList={allPokemon} />
         </article>
       </section>
     </>
