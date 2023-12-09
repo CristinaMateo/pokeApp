@@ -1,7 +1,5 @@
-
-
-  class Pokemon{
-    constructor(id,name, image,typeOne,typeTwo){
+class Pokemon{
+    constructor(id, name, image, typeOne, typeTwo){
     this.id = id;
     this.name = name;
     this.image = image;

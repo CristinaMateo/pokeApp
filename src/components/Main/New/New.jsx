@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { PokeContext } from "../../../context/PokeContext";
+import Pokemon from "../../Object/Object";
 
 
 const New = () => {
@@ -14,7 +15,13 @@ const New = () => {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => addPokemon(data)
+  const onSubmit = (data) => addPokemon(new Pokemon(
+    data.id, 
+    data.name, 
+    data.image,
+    data.typeOne, 
+    data.typeTwo
+    ))
 
 
 
@@ -26,8 +33,8 @@ const New = () => {
       <label htmlFor="id">id:</label>
       <input type="number" {...register("id", { required: true })} />
 
-      <label htmlFor="img">Img:</label>
-      <input type="text" {...register("img", { required: true })} />
+      <label htmlFor="image">Img:</label>
+      <input type="text" {...register("image", { required: true })} />
 
       <label htmlFor="typeOne">typeOne</label>
       <select {...register("typeOne", { required: true })}>

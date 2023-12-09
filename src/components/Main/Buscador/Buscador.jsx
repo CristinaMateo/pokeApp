@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios';
 import Search from './Search';
 import HomeList from "../Home/HomeList";
+import Pokemon from "../../Object/Object";
 
 const Buscador = () => {
   const [searchText, setSearchText] = useState("");
@@ -18,7 +19,13 @@ const Buscador = () => {
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${searchText.toLowerCase()}`);
         const data = response.data;
 
-        setPokemonList((prevList) => [...prevList, data]);
+        setPokemonList((prevList) => [...prevList, new Pokemon(
+          data.id, 
+          data.name, 
+          data.sprites.other.home.front_default,
+          data.types[0].type.name, 
+          data.types[1]?.type.name
+          )]);
       } catch (error) {
         alert("pokemon no encontrado")
       }

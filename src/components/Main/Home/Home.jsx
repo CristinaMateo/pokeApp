@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import HomeList from './HomeList';
-
+import Pokemon from '../../Object';
 
 const Home = () => {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -19,10 +19,13 @@ const Home = () => {
           const pokeResponse = await axios.get(pokemon.url);
           const pokemonFull = pokeResponse.data;
 
-          return {
-            ...pokemon,
-            ...pokemonFull,
-          };
+          return new Pokemon(
+            pokemonFull.id, 
+            pokemonFull.name, 
+            pokemonFull.sprites.other.home.front_default,
+            pokemonFull.types[0].type.name, 
+            pokemonFull.types[1]?.type.name
+            )
         }));
 
         setAllPokemon(pokeData);
