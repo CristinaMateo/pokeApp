@@ -11,7 +11,7 @@ const Details = () => {
     const fetchPokeDet = async () => {
       try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-        const data =  await response.json();
+        const data = await response.json();
         console.log(data)
 
         setPokemonDet(data)
@@ -29,7 +29,8 @@ const Details = () => {
       <article>
         <span>{pokemonDet.id}</span>
         <h2>{pokemonDet.name.charAt(0).toUpperCase() + pokemonDet.name.slice(1)}</h2>
-        {/* Otro contenido del componente Details */}
+        <img className="pokeImg" src={pokemon.sprites.other.home.front_default} alt={pokemon.name} />
+        <p className="pokeType">{pokemon.types.map(tipo => <span key={tipo.type.name}> {tipo.type.name.toUpperCase()}</span>)}</p>
       </article>
   );
 }

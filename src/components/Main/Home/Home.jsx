@@ -7,6 +7,8 @@ import HomeList from './HomeList';
 const Home = () => {
   const [allPokemon, setAllPokemon] = useState([]);
 
+
+
   useEffect(() => {
     const fetchAllPokemon = async () => {
       try {
