@@ -13,7 +13,7 @@ const HomeList = ({ pokeList }) => {
 
       {allPokemon == [] ? <p>No hay pokemon</p> :
         allPokemon.map((pokemon, index) => (
-          <Link className="toDetails" to={`/pokemon/${pokemon.id}`}><HomeCard key={index} pokemon={pokemon} /></Link>
+          <Link className="toDetails" to={`/pokemon/${pokemon.id}?name=${pokemon.name}&image=${pokemon.image}&typeOne=${pokemon.typeOne}&typeDos${pokemon.typeDos}`}><HomeCard key={index} pokemon={pokemon} /></Link>
         ))
 
       }

@@ -11,27 +11,31 @@ const New = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
+    reset,
   } = useForm()
 
-  const onSubmit = (data) => addPokemon(new Pokemon(
-    data.id, 
-    data.name, 
-    data.image,
-    data.typeOne, 
-    data.typeTwo
+  const onSubmit = (data) => {
+    addPokemon(new Pokemon(
+      data.id,
+      data.name,
+      data.image,
+      data.typeOne,
+      data.typeTwo
     ))
-
+    reset()
+  }
 
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor="name">name:</label>
-      <input type="text" {...register("name", { required: true })} />
+      <input type="text" {...register("name", { required: true, minLength: 3 })} />
+      {errors.name && <span>name has to have at least 3 chars</span>}
 
-      <label htmlFor="id">id:</label>
-      <input type="number" {...register("id", { required: true })} />
+      <label htmlFor="id">id(greater than 1500):</label>
+      <input type="number" {...register("id", { required: true, min: 1500 })} />
+      {errors.id && <span>id has to be greater than 1500</span>}
 
       <label htmlFor="image">Img:</label>
       <input type="text" {...register("image", { required: true })} />
