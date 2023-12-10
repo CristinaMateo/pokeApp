@@ -42,15 +42,57 @@ const Details = () => {
   return (
     pokemonDet === undefined ?
       <p>Buscando...</p> :
-      <article>
-        <span>{pokemonDet.id}</span>
-        <h2>{pokemonDet.name.charAt(0).toUpperCase() + pokemonDet.name.slice(1)}</h2>
-        <img className="pokeImg" src={pokemonDet.image} alt={pokemonDet.name} />
-        <p className="pokeType">
-          <span key={pokemonDet.typeOne}> {pokemonDet.typeOne.toUpperCase()}</span>
-          {pokemonDet.typeTwo && <span key={pokemonDet.typeTwo}> {pokemonDet.typeTwo.toUpperCase()}</span>}
-        </p>
+
+      <article id="pokeDet" className={pokemonDet.typeOne} >
+        <div id="pokeId"><span className="pokeDet">#{pokemonDet.id}</span></div>
+
+        <h2 className="pokeDet ">{pokemonDet.name.charAt(0).toUpperCase() + pokemonDet.name.slice(1)}</h2>
+
+        <article id="nocolor">
+          <img className="pokeDetImg" src={pokemonDet.image} alt={pokemonDet.name} />
+
+          <p className="pokeDet">
+            <span key={pokemonDet.typeOne} className={pokemonDet.typeOne}> {pokemonDet.typeOne.charAt(0).toUpperCase() + pokemonDet.typeOne.slice(1)}</span>
+
+            {pokemonDet.typeTwo && <span key={pokemonDet.typeTwo} className={pokemonDet.typeTwo}> {pokemonDet.typeTwo.charAt(0).toUpperCase() + pokemonDet.typeTwo.slice(1)}</span>}
+
+          </p>
+
+
+          <table>
+            <tr>
+              <th className="separador">
+                <div className="table">
+                  {pokemonDet.abilities.map((ability, index) => (
+                    <React.Fragment key={ability.ability.name}>
+                      {ability.ability.name}
+                      {index < pokemonDet.abilities.length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
+                </div>
+                Moves
+              </th>
+
+              <th className="separador">
+                <div className="table">
+                  <td>{pokemonDet.height}0 cm</td>
+                </div>
+                height
+              </th>
+
+              <th>
+                <div className="table">
+                  <td>{pokemonDet.weight}000 g</td>
+                </div>
+                weight
+              </th>
+            </tr>
+          </table>
+        </article>
+
+
       </article>
+
   );
 }
 

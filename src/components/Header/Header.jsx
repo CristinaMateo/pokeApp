@@ -6,7 +6,7 @@ const Header = () => {
   return (
   <header>
     <Nav/>
-    <h1>Pokédex</h1>
+    <h1>PokéDex</h1>
     <img id="inicio" src={inicio} alt="imagen de inicio" />
   </header>);
 };

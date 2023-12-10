@@ -1,0 +1,154 @@
+@import '../utils/variables.scss';
+
+#pokeDet {
+    width: 40%;
+    justify-content: center;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+#nocolor {
+    background-color: rgba(255, 255, 255, 0.858);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.pokeDetImg {
+    width: 30%;
+}
+
+#pokeId {
+    text-align: right;
+    padding: 10px;
+}
+
+.pokeDet {
+    color: $yellow;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $lb;
+    padding: 5px;
+}
+
+
+.table{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-bottom: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+    color: $yellow;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: $lb;
+    font-size: small;
+    line-height: 2;
+    margin: auto;
+}
+
+th {
+    position: relative;
+}
+
+.separador::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 0;
+    bottom: 10%;
+    width: 1px;
+    background-color: $gray;
+}
+
+.normal {
+    background-color: $normal;
+    padding: 5px;
+}
+
+.fire {
+    background-color: $fire;
+    padding: 5px;
+}
+
+.water {
+    background-color: $water;
+    padding: 5px;
+}
+
+.grass {
+    background-color: $grass;
+    padding: 5px;
+}
+
+.electric {
+    background-color: $electric;
+    padding: 5px;
+}
+
+.ice {
+    background-color: $ice;
+    padding: 5px;
+}
+
+.fighting {
+    background-color: $fighting;
+    padding: 5px;
+}
+
+.poison {
+    background-color: $poison;
+    padding: 5px;
+}
+
+.ground {
+    background-color: $ground;
+    padding: 5px;
+}
+
+.flying {
+    background-color: $flying ;
+    padding: 5px;
+}
+
+.psychic {
+    background-color: $psychic;
+    padding: 5px;
+}
+
+.rock {
+    background-color: $rock;
+    padding: 5px;
+}
+
+.ghost {
+    background-color: $ghost;
+    padding: 5px;
+}
+
+.dragon {
+    background-color: $dragon;
+    padding: 5px;
+}
+
+.dark {
+    background-color: $dark;
+    padding: 5px;
+}
+
+.steel {
+    background-color: $steel;
+    padding: 5px;
+}
+
+.fairy {
+    background-color: $fairy;
+    padding: 5px;
+}
