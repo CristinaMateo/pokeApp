@@ -15,13 +15,13 @@ const Search = ({ searchText, setSearchText, onSearch }) => {
   };
 
   return (
-    <div>
-      <input
+    <div className="searcher">
+      <input  className="searcher"
         type="text"
         value={searchText}
         onChange={handleInputChange}
       />
-      <button onClick={onSearch}>Buscar</button>
+      <button  className="searcher"onClick={onSearch}>Buscar</button>
     </div>
 
   );

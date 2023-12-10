@@ -3,6 +3,7 @@ nav {
     justify-content: center;
     margin: 10px 0;
     background-color: #363b81;
+    flex-wrap: wrap;
 }
 
 .nav-bar {
@@ -27,3 +28,13 @@ nav {
         }
     }
 }
+
+
+@media screen and (max-width: 390px) {
+  
+    li{
+        margin:20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }

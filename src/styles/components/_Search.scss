@@ -1,0 +1,14 @@
+.searcher{
+    margin-top:20px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    color: $yellow;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $lb;
+}
+
+button.searcher{
+    background-color: $bg;
+    border: $blue solid 0.5px;
+    padding: 5px;
+}

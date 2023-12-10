@@ -8,3 +8,16 @@
 .toDetails{
     text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+.homeList{
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+
+@media screen and (max-width: 520px) {
+    .homeList{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    }

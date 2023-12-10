@@ -39,6 +39,8 @@ const Details = () => {
     fetchPokeDet();
   }, []);
 
+  //en fase 2 añadir detalles de base stats
+
   return (
     pokemonDet === undefined ?
       <p>Buscando...</p> :
@@ -58,7 +60,7 @@ const Details = () => {
 
           </p>
 
-
+      {pokemonDet.abilities &&
           <table>
             <tr>
               <th className="separador">
@@ -87,7 +89,7 @@ const Details = () => {
                 weight
               </th>
             </tr>
-          </table>
+          </table>}
         </article>
 
 

@@ -1,0 +1,35 @@
+.new {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+.new>select,
+.new>button,
+.new>input,
+.new>label {
+    color: $yellow;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $lb;
+    margin-top: 10px;
+}
+
+article>.new {
+    background-color: $blue;
+}
+
+.new>select>option {
+    color: $blue;
+    background-color: $beige;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (max-width: 550px) {
+    .new{
+        width: 80%;
+    }
+    }

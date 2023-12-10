@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const fetchAllPokemon = async () => {
       try {
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=10`);
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=20`);
         const pokemonData = response.data.results;
 
         const pokeData = await Promise.all(pokemonData.map(async (pokemon) => {
