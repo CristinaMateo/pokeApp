@@ -29,18 +29,18 @@ const New = () => {
 
   return (
     <form className="new" onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="name">name:</label>
+      <label htmlFor="name">Pokemon name:</label>
       <input type="text" {...register("name", { required: true, minLength: 3 })} />
       {errors.name && <span>name has to have at least 3 chars</span>}
 
-      <label htmlFor="id">id(greater than 1500):</label>
+      <label htmlFor="id">Pokemon id(greater than 1500):</label>
       <input type="number" {...register("id", { required: true, min: 1500 })} />
       {errors.id && <span>id has to be greater than 1500</span>}
 
       <label htmlFor="image">Img:</label>
       <input type="text" {...register("image", { required: true })} />
 
-      <label htmlFor="typeOne">typeOne</label>
+      <label htmlFor="typeOne">First type</label>
       <select {...register("typeOne", { required: true })}>
         <option value="normal">Normal</option>
         <option value="fire">Fire</option>
@@ -62,7 +62,7 @@ const New = () => {
         <option value="fairy">Fairy</option>
       </select>
 
-      <label htmlFor="typeTwo">typeTwo</label>
+      <label htmlFor="typeTwo">Second type (optional)</label>
       <select {...register("typeTwo", { required: false })}>
         <option value={null}>NONE</option>
         <option value="normal">Normal</option>
@@ -85,7 +85,7 @@ const New = () => {
         <option value="fairy">Fairy</option>
       </select>
 
-      <button >CREATE</button>
+      <button >Create</button>
     </form>
   );
 };
